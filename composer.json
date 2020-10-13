@@ -1,0 +1,45 @@
+{
+  "name": "e-spin/form-regex-bundle",
+  "description": "Text field with validate input with regular expression (regex) to a form in Contao.",
+  "keywords": [
+    "contao",
+    "form",
+    "default",
+    "check",
+    "validate",
+    "regular expression",
+    "regex",
+    "regexp"
+  ],
+  "type": "contao-bundle",
+  "homepage": "https://www.e-spin.de",
+  "license": "LGPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "e-spin",
+      "email": "info@e-spin.de",
+      "homepage": "https://www.e-spin.de",
+      "role": "Developer"
+    },
+    {
+      "name": "Kamil Kuzminski",
+      "email": "kamil.kuzminski@codefog.pl",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.1",
+    "contao/core-bundle": "^4.4"
+  },
+  "require-dev": {
+    "contao/manager-plugin": "^2.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Espin\\FormRegexBundle\\": "src/"
+    }
+  },
+  "extra": {
+    "contao-manager-plugin": "Espin\\FormRegexBundle\\ContaoManager\\Plugin"
+  }
+}
