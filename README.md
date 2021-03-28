@@ -12,7 +12,7 @@ Mit der Erweiterung steht ein neues Textfeld im Formulargenerator zur Verfügung
 individuelle Eingabeprüfung per [Regular Expression (Regex)](https://de.wikipedia.org/wiki/Regul%C3%A4rer_Ausdruck)
 erfolgt und im Fehlerfall eine entsprechende Meldung ausgegeben wird.
 
-Zusätzlich kann über eine Checkbox das Pattern auch als HTML5-Attribut für eine prüfung im Browser ausgegeben werden.
+Zusätzlich kann über eine Checkbox das Pattern auch als HTML5-Attribut für eine Prüfung im Browser ausgegeben werden.
 
 ## Beispiele
 
