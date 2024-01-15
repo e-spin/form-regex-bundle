@@ -18,7 +18,7 @@ declare(strict_types=1);
  * Add palettes to tl_form_field
  */
 $GLOBALS['TL_DCA']['tl_form_field']['palettes']['rgxp'] =
-    '{type_legend},type,name,label;{fconfig_legend},mandatory,placeholder,rgxp_pattern,rgxp_pattern_attr,rgxp_error;{expert_legend:hide},class,value,minlength,maxlength,accesskey,tabindex;{submit_legend},addSubmit';
+    '{type_legend},type,name,label;{fconfig_legend},mandatory,placeholder,rgxp_pattern,rgxp_pattern_attr,rgxp_error;{expert_legend:hide},class,value,minlength,maxlength,accesskey,tabindex;{invisible_legend:hide},invisible';
 
 /**
  * Add fields to tl_form_field
