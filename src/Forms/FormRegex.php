@@ -3,12 +3,12 @@
 /**
  * This file is part of e-spin/form-regex-bundle.
  *
- * Copyright (c) 2020 e-spin
+ * Copyright (c) 2020-2024 e-spin
  *
  * @package   e-spin/form-regex-bundle
  * @author    Ingolf Steinhardt <info@e-spin.de>
  * @author    Kamil Kuzminski <kamil.kuzminski@codefog.pl>
- * @copyright 2020 e-spin
+ * @copyright 2020-2024 e-spin
  * @license   LGPL-3.0-or-later
  */
 
@@ -16,13 +16,16 @@ declare(strict_types=1);
 
 namespace Espin\FormRegexBundle\Forms;
 
-class FormRegex extends \FormTextField
+use Contao\FormText;
+
+class FormRegex extends FormText
 {
     /**
      * Add the attribute pattern
-     * @param array
+     *
+     * @param array|null $arrAttributes
      */
-    public function __construct($arrAttributes=null)
+    public function __construct(array $arrAttributes=null)
     {
         parent::__construct($arrAttributes);
 
@@ -34,7 +37,7 @@ class FormRegex extends \FormTextField
     /**
      * Validate the regular expression
      */
-    public function validate()
+    public function validate(): void
     {
         parent::validate();
 
@@ -42,19 +45,19 @@ class FormRegex extends \FormTextField
             return;
         }
 
-        // Do not validate if the field is not mandatory and there is no value
+        // Do not validate if the field is not mandatory and there is no value.
         if (!$this->mandatory && $this->varValue === '') {
             return;
         }
 
-        if (preg_match('/' . $this->rgxp_pattern . '/', $this->varValue)) {
+        if (\preg_match('/' . $this->rgxp_pattern . '/', $this->varValue)) {
             return;
         }
 
         $strMessage = $GLOBALS['TL_LANG']['ERR']['general'];
 
-        // Use custom error message
-        if ($this->rgxp_error != '') {
+        // Use custom error message.
+        if ($this->rgxp_error !== '') {
             $strMessage = $this->rgxp_error;
         }
 
